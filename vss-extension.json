@@ -1,0 +1,36 @@
+{
+  "manifestVersion": 1,
+  "id": "CiscoSpark",
+  "name": "Cisco Spark",
+  "version": "0.1.0",
+  "publisher": "Carlo Wahlstedt",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Tool to posting a message to a spark space.",
+  "categories": [
+    "Integrate"
+  ],
+  "icons": {
+    "default": "images/icon.png"
+  },
+  "files": [
+    {
+      "path": "buildtask"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "CiscoSpark",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "buildtask"
+      }
+    }
+  ]
+}
