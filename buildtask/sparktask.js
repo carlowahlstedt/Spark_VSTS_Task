@@ -9,14 +9,37 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const tl = require("vsts-task-lib/task");
-// import trm = require('vsts-task-lib/toolrunner');
-// import mod = require('./taskmod');
+// import * as restm from 'vso-node-api/RestClient';
+const spark = require("ciscospark");
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             var botAccessToken = tl.getInput('botAccessToken', true);
-            var teamsUrl = "https://api.ciscospark.com/v1/teams";
-            // request.
+            var teamsUrl = "";
+            var rom = spark.rooms;
+            var roms = spark.rooms.list();
+            // http.request({
+            //     hostname: 'api.ciscospark.com',
+            //     // port: 443,
+            //     path: '/v1/rooms',
+            //     method: 'GET',
+            //     headers: {
+            //         'Content-Type': 'application/json; charset=utf-8',
+            //         'Authorization': 'Bearer OTZhNjk1ZGMtYjlmZi00MTcwLWFlMjktYWQ5MTllMGM1MGU4ZjUwMDg2NjEtMGUz',
+            //         // 'Content-Length': Buffer.byteLength(postData)
+            //     }
+            // }, (res) => {
+            //     console.log(`STATUS: ${res.statusCode}`);
+            //     console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
+            //     res.setEncoding('utf8');
+            //     res.on('data', (chunk) => {
+            //         console.log(`BODY: ${chunk}`);
+            //     });
+            //     res.on('end', () => {
+            //         console.log('No more data in response.');
+            //     });
+            // });
+            // var teams = request.get(teamsUrl);
             // $.get(teamsUrl, function (data) {
             //     console.log(data);
             // });'
@@ -65,3 +88,4 @@ function run() {
     });
 }
 run();
+//# sourceMappingURL=sparktask.js.map

@@ -1,18 +1,43 @@
 import tl = require('vsts-task-lib/task');
-import request = require('request');
-// import trm = require('vsts-task-lib/toolrunner');
-// import mod = require('./taskmod');
+import * as corem from 'vso-node-api/CoreApi';
+// import * as restm from 'vso-node-api/RestClient';
+import spark = require('ciscospark');
+import http = require('https');
 
 async function run() {
     try {
         var botAccessToken = tl.getInput('botAccessToken', true);
-        var teamsUrl = "https://api.ciscospark.com/v1/teams";
+        var teamsUrl = "";
 
-        // request.
+        var rom = spark.rooms;
+        var roms = spark.rooms.list();
+
+        // http.request({
+        //     hostname: 'api.ciscospark.com',
+        //     // port: 443,
+        //     path: '/v1/rooms',
+        //     method: 'GET',
+        //     headers: {
+        //         'Content-Type': 'application/json; charset=utf-8',
+        //         'Authorization': 'Bearer OTZhNjk1ZGMtYjlmZi00MTcwLWFlMjktYWQ5MTllMGM1MGU4ZjUwMDg2NjEtMGUz',
+        //         // 'Content-Length': Buffer.byteLength(postData)
+        //     }
+        // }, (res) => {
+        //     console.log(`STATUS: ${res.statusCode}`);
+        //     console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
+        //     res.setEncoding('utf8');
+        //     res.on('data', (chunk) => {
+        //         console.log(`BODY: ${chunk}`);
+        //     });
+        //     res.on('end', () => {
+        //         console.log('No more data in response.');
+        //     });
+        // });
+
+        // var teams = request.get(teamsUrl);
         // $.get(teamsUrl, function (data) {
         //     console.log(data);
         // });'
-
         var teamName = tl.getInput('teamName', true);
         // GET teams
         // https://api.ciscospark.com/v1/teams

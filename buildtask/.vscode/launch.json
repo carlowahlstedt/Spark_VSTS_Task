@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/sparktask.js",
+            "program": "${workspaceRoot}/sparktask.ts",
             "protocol": "inspector",
             "env": {
                 "INPUT_botAccessToken": "OTZhNjk1ZGMtYjlmZi00MTcwLWFlMjktYWQ5MTllMGM1MGU4ZjUwMDg2NjEtMGUz",
@@ -24,7 +24,7 @@
             ],
             "sourceMaps": true,
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/*.js"
             ]
         }
     ]
