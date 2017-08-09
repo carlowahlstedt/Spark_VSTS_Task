@@ -13,14 +13,15 @@
   "homepage": "https://github.com/carlowahlstedt/Spark_VSTS_Task#readme",
   "author": "Carlo Wahlstedt",
   "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^7.0.29",
-    "@types/q": "^1.0.0",
-    "@types/request": "0.0.43",
-    "@types/vso-node-api": "^4.0.0",
-    "ciscospark": "^1.0.4",
-    "request": "^2.81.0",
-    "vso-node-api": "^6.2.3-preview",
-    "vsts-task-lib": "^2.0.5"
+  "bugs": {
+    "url": "https://github.com/carlowahlstedt/Spark_VSTS_Task/issues"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@types/node": "^8.0.20",
+    "@types/q": "^1.0.3",
+    "ciscospark": "^1.9.4",
+    "vso-node-api": "^6.2.7-preview",
+    "vsts-task-lib": "^2.0.6"
   }
 }
