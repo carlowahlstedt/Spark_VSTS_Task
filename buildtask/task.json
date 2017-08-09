@@ -1,5 +1,5 @@
 {
-  "id": "44ff220e-377b-4264-a5aa-b8546eaf4d02",
+  "id": "44ff220e-377b-4264-a5aa-b8545eaf4d02",
   "name": "ciscoSpark",
   "friendlyName": "Cisco Spark",
   "description": "Posts a message to a Cisco Spark space.",
@@ -13,20 +13,12 @@
   "instanceNameFormat": "Spark Message to $(teamName) - $(roomName)",
   "inputs": [
     {
-      "name": "botAccessToken",
-      "type": "string",
-      "label": "Bot Access Token",
-      "defaultValue": "",
-      "required": true,
-      "helpMarkDown": "The generated token when a bot is created in Cisco Spark. https://developer.ciscospark.com/add-bot.html"
-    },
-    {
       "name": "teamName",
       "type": "string",
       "label": "Team Name",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "The name of the team that the Cisco Spark space is a part of."
+      "helpMarkDown": "The name of the team that the Cisco Spark space is a part of. You must add the bot to the team."
     },
     {
       "name": "roomName",
@@ -34,7 +26,7 @@
       "label": "Space Name",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "The name of the space/team that you want to post the message to."
+      "helpMarkDown": "The name of the space/team that you want to post the message to. You must add the bot to the room."
     },
     {
       "name": "message",
