@@ -1,3 +1,4 @@
 buildtask/.vscode/tasks.json
 buildtask/node_modules/
 *.vsix
+buildtask/.taskkey
