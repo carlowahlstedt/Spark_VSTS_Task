@@ -8,79 +8,34 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const tl = require("vsts-task-lib/task");
-// import * as restm from 'vso-node-api/RestClient';
-const spark = require("ciscospark");
+const tl = require("vsts-task-lib");
+const spark = require(`ciscospark/env`);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            var botAccessToken = tl.getInput('botAccessToken', true);
-            var teamsUrl = "";
-            var rom = spark.rooms;
-            var roms = spark.rooms.list();
-            // http.request({
-            //     hostname: 'api.ciscospark.com',
-            //     // port: 443,
-            //     path: '/v1/rooms',
-            //     method: 'GET',
-            //     headers: {
-            //         'Content-Type': 'application/json; charset=utf-8',
-            //         'Authorization': 'Bearer OTZhNjk1ZGMtYjlmZi00MTcwLWFlMjktYWQ5MTllMGM1MGU4ZjUwMDg2NjEtMGUz',
-            //         // 'Content-Length': Buffer.byteLength(postData)
-            //     }
-            // }, (res) => {
-            //     console.log(`STATUS: ${res.statusCode}`);
-            //     console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
-            //     res.setEncoding('utf8');
-            //     res.on('data', (chunk) => {
-            //         console.log(`BODY: ${chunk}`);
-            //     });
-            //     res.on('end', () => {
-            //         console.log('No more data in response.');
-            //     });
-            // });
-            // var teams = request.get(teamsUrl);
-            // $.get(teamsUrl, function (data) {
-            //     console.log(data);
-            // });'
             var teamName = tl.getInput('teamName', true);
-            // GET teams
-            // https://api.ciscospark.com/v1/teams
-            // Request Headers
-            // Content - type:application/ json; charset = utf - 8
-            // Authorization:Bearer ODI1ZWM1NDktZTFhZS00N2VkLTg3YWMtYWIzNzg4OGFmNzc2YzBlZDNlODItYTFi
-            var team = '';
-            // array.forEach(element => {
-            //     if (element.name === teamName) {
-            //         team = element.id;
-            //     }
-            // });
-            // GET rooms
-            // https://api.ciscospark.com/v1/rooms
-            // Request Headers
-            // Content - type:application/ json; charset = utf - 8
-            // Authorization:Bearer ODI1ZWM1NDktZTFhZS00N2VkLTg3YWMtYWIzNzg4OGFmNzc2YzBlZDNlODItYTFi
-            // Query Parameters
-            // Name	Type	Your values	Required
-            // teamId	string	team
-            // type string	group
-            var roomName = tl.getInput('roomName', true);
-            var room = '';
-            // array.forEach(element => {
-            //     if (element.title === roomName) {
-            //         room = element.id;
-            //     }
-            // });
-            // POST a message
-            // https://api.ciscospark.com/v1/messages
-            // Request Headers
-            // Content - type:application/ json; charset = utf - 8
-            // Authorization:Bearer ODI1ZWM1NDktZTFhZS00N2VkLTg3YWMtYWIzNzg4OGFmNzc2YzBlZDNlODItYTFi
-            // Request Parameters
-            // Name	Type	Your values	Required
-            // roomId	string	
-            // markdown	string	
+            var roomName = tl.getInput('roomName', true).toUpperCase();
             var message = tl.getInput('message', true);
+            var team;
+            var teams = yield spark.teams.list();
+            for (var index = 0; index < teams.length; index++) {
+                if (teams.items[index].name = teamName) {
+                    team = teams.items[index];
+                    break;
+                }
+            }
+            if (team != null) {
+                var rooms = yield spark.rooms.list();
+                for (var index = 0; index < rooms.length; index++) {
+                    var room = rooms.items[index];
+                    if (room.teamId == team.id && room.title.toUpperCase() == roomName) {
+                        spark.messages.create({
+                            text: message,
+                            roomId: room.id
+                        });
+                    }
+                }
+            }
         }
         catch (err) {
             tl.setResult(tl.TaskResult.Failed, err.message);
