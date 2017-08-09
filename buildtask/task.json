@@ -13,6 +13,14 @@
   "instanceNameFormat": "Spark Message to $(teamName) - $(roomName)",
   "inputs": [
     {
+      "name": "access_token",
+      "type": "string",
+      "label": "Cisco Spark Access Token",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": ""
+    },
+    {
       "name": "teamName",
       "type": "string",
       "label": "Team Name",

@@ -9,10 +9,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const tl = require("vsts-task-lib");
-const spark = require(`ciscospark/env`);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            var token = tl.getInput('access_token', true);
+            process.env.CISCOSPARK_ACCESS_TOKEN = token;
+            const spark = require(`ciscospark/env`);
+            // const spark = new CiscoSpark({
+            //     credentials: token
+            // });
+            // "CISCOSPARK_ACCESS_TOKEN": "MWE3NzQ5MjItN2I2My00NTNkLWI2OTUtNThiN2E1YzNhZmU5Y2I0MTAyMzItYzEy",
             var teamName = tl.getInput('teamName', true);
             var roomName = tl.getInput('roomName', true).toUpperCase();
             var message = tl.getInput('message', true);

@@ -1,12 +1,15 @@
 import tl = require('vsts-task-lib');
-const spark = require(`ciscospark/env`);
 
 async function run() {
     try {
+        process.env.CISCOSPARK_ACCESS_TOKEN = tl.getInput('access_token', true);
+
         var teamName = tl.getInput('teamName', true);
         var roomName = tl.getInput('roomName', true).toUpperCase();
         var message = tl.getInput('message', true);
         var team: any;
+
+        const spark = require(`ciscospark/env`);
 
         var teams = await spark.teams.list();
         for (var index = 0; index < teams.length; index++) {
