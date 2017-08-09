@@ -18,7 +18,7 @@
       "label": "Cisco Spark Access Token",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": ""
+      "helpMarkDown": "The token from your spark app. https://developer.ciscospark.com/apps.html"
     },
     {
       "name": "teamName",
