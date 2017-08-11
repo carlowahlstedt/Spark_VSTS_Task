@@ -8,14 +8,14 @@
   "version": {
     "Major": 0,
     "Minor": 1,
-    "Patch": 0
+    "Patch": 7
   },
   "instanceNameFormat": "Spark Message to $(teamName) - $(roomName)",
   "inputs": [
     {
       "name": "access_token",
       "type": "string",
-      "label": "Cisco Spark Access Token",
+      "label": "Access Token",
       "defaultValue": "",
       "required": true,
       "helpMarkDown": "The token from your spark app. https://developer.ciscospark.com/apps.html"
@@ -47,7 +47,8 @@
   ],
   "execution": {
     "Node": {
-      "target": "sparktask.js"
+      "target": "sparktask.js",
+      "argumentFormat": ""
     }
   }
 }
