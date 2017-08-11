@@ -2,16 +2,25 @@
   "manifestVersion": 1,
   "id": "CiscoSpark",
   "name": "Cisco Spark",
-  "version": "0.1.0",
-  "publisher": "Carlo Wahlstedt",
+  "version": "0.1.7",
+  "publisher": "carlowahlstedt",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "Tool to posting a message to a spark space.",
+  "description": "Posts a message to a Cisco Spark space.",
   "categories": [
-    "Integrate"
+    "Collaborate"
+  ],
+  "tags": [
+    "cisco spark",
+    "message"
+  ],
+  "screenshots": [
+    {
+      "path": "images/screenshot.png"
+    }
   ],
   "icons": {
     "default": "images/icon.png"
@@ -21,6 +30,30 @@
       "path": "buildtask"
     }
   ],
+  "content": {
+    "details": {
+      "path": "README.md"
+    }
+  },
+  "branding": {
+    "color": "rgb(241, 92, 34)",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task"
+  },
+  "links": {
+    "home": {
+      "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task"
+    },
+    "repository": {
+      "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task"
+    },
+    "issues": {
+      "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task/issues"
+    }
+  },
   "contributions": [
     {
       "id": "CiscoSpark",
