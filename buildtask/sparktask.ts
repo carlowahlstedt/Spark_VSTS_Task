@@ -33,7 +33,7 @@ async function run() {
         }
     }
     catch (err) {
-        tl.setResult(tl.TaskResult.Failed, err.message);
+        tl.setResult(tl.TaskResult.Failed, err.constructor.name + ": " + err.message);
     }
 }
 

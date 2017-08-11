@@ -12,17 +12,12 @@ const tl = require("vsts-task-lib");
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            var token = tl.getInput('access_token', true);
-            process.env.CISCOSPARK_ACCESS_TOKEN = token;
-            const spark = require(`ciscospark/env`);
-            // const spark = new CiscoSpark({
-            //     credentials: token
-            // });
-            // "CISCOSPARK_ACCESS_TOKEN": "MWE3NzQ5MjItN2I2My00NTNkLWI2OTUtNThiN2E1YzNhZmU5Y2I0MTAyMzItYzEy",
+            process.env.CISCOSPARK_ACCESS_TOKEN = tl.getInput('access_token', true);
             var teamName = tl.getInput('teamName', true);
             var roomName = tl.getInput('roomName', true).toUpperCase();
             var message = tl.getInput('message', true);
             var team;
+            const spark = require(`ciscospark/env`);
             var teams = yield spark.teams.list();
             for (var index = 0; index < teams.length; index++) {
                 if (teams.items[index].name = teamName) {
@@ -44,7 +39,7 @@ function run() {
             }
         }
         catch (err) {
-            tl.setResult(tl.TaskResult.Failed, err.message);
+            tl.setResult(tl.TaskResult.Failed, err.constructor.name + ": " + err.message);
         }
     });
 }
