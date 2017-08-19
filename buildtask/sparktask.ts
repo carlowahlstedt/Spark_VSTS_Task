@@ -25,7 +25,7 @@ async function run() {
                 var room = rooms.items[index];
                 if (room.teamId == team.id && room.title.toUpperCase() == roomName) {
                     spark.messages.create({
-                        text: message,
+                        markdown: message,
                         roomId: room.id
                     });
                 }

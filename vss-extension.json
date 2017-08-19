@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "CiscoSpark",
   "name": "Cisco Spark",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "publisher": "carlowahlstedt",
   "targets": [
     {
@@ -36,8 +36,7 @@
     }
   },
   "branding": {
-    "color": "rgb(241, 92, 34)",
-    "theme": "dark"
+    "color": "rgb(241, 92, 34)"
   },
   "repository": {
     "type": "git",
