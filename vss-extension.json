@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "CiscoSpark",
   "name": "Cisco Spark",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "carlowahlstedt",
   "targets": [
     {
@@ -30,9 +30,15 @@
       "path": "buildtask"
     }
   ],
+  "galleryFlags": [
+    "Public"
+  ],
   "content": {
     "details": {
       "path": "README.md"
+    },
+    "license": {
+      "path": "LICENSE.md"
     }
   },
   "branding": {
@@ -50,6 +56,15 @@
       "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task"
     },
     "issues": {
+      "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task/issues"
+    },
+    "getstarted": {
+      "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task/blob/master/README.md"
+    },
+    "learn": {
+      "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task/blob/master/README.md"
+    },
+    "support": {
       "uri": "https://github.com/carlowahlstedt/Spark_VSTS_Task/issues"
     }
   },
