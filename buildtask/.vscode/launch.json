@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/buildtask/sparktask.ts",
+            "program": "${workspaceRoot}/sparktask.ts",
             "protocol": "inspector",
             "env": {
                 "INPUT_access_token": "",
@@ -24,7 +24,7 @@
             ],
             "sourceMaps": true,
             "outFiles": [
-                "${workspaceRoot}/buildtask/*.js"
+                "${workspaceRoot}/*.js"
             ]
         }
     ]
