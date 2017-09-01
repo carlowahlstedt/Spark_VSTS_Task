@@ -1,5 +1,5 @@
-buildtask/.vscode/tasks.json
-buildtask/node_modules/
+.vscode/tasks.json
+node_modules/
 *.vsix
+package-lock.json
 buildtask/.taskkey
-buildtask/package-lock.json
