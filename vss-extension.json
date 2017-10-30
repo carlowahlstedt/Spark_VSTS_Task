@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "CiscoSpark",
   "name": "Cisco Spark",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publisher": "carlowahlstedt",
   "targets": [
     {

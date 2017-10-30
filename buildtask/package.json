@@ -20,7 +20,7 @@
   "dependencies": {
     "@types/node": "^8.0.20",
     "@types/q": "^1.0.3",
-    "ciscospark": "^1.9.4",
+    "ciscospark": "^1.15.0",
     "vso-node-api": "^6.2.7-preview",
     "vsts-task-lib": "^2.0.6"
   }
