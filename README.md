@@ -11,7 +11,3 @@ A VSTS/TFS Task to post messages to Cisco Spark
 1. Then, in the VSTS task, input your token, team name, space name, and the message you'd like to output.
 
 Note: All fields are required to help ensure that the message reaches the correct space. It is still possible that you have duplicate combinations of team and space names.
-
-## Known Issues
-
-- The message box is suppose to [support markdown](https://github.com/ciscospark/spark-js-sdk/issues/680).
