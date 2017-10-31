@@ -21,6 +21,7 @@ function run() {
             var teams = yield spark.teams.list();
             for (var index = 0; index < teams.length; index++) {
                 if (teams.items[index].name = teamName) {
+                    console.log('Team found');
                     team = teams.items[index];
                     break;
                 }
@@ -30,8 +31,10 @@ function run() {
                 for (var index = 0; index < rooms.length; index++) {
                     var room = rooms.items[index];
                     if (room.teamId == team.id && room.title.toUpperCase() == roomName) {
+                        console.log('Room found for that team');
+                        console.log('Message to output: ' + message);
                         spark.messages.create({
-                            text: message,
+                            markdown: message,
                             roomId: room.id
                         });
                     }
