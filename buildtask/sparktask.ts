@@ -4,7 +4,7 @@ async function run() {
     try {
         process.env.CISCOSPARK_ACCESS_TOKEN = tl.getInput('access_token', true);
 
-        var teamName = tl.getInput('teamName', true);
+        var teamName = tl.getInput('teamName', true).toUpperCase();
         var roomName = tl.getInput('roomName', true).toUpperCase();
         var message = tl.getInput('message', true);
         var team: any;
@@ -13,7 +13,7 @@ async function run() {
 
         var teams = await spark.teams.list();
         for (var index = 0; index < teams.length; index++) {
-            if (teams.items[index].name = teamName) {
+            if (teams.items[index].name.toUpperCase() == teamName) {
                 console.log('Team found');
                 team = teams.items[index];
                 break;
