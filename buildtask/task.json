@@ -47,8 +47,7 @@
   ],
   "execution": {
     "Node": {
-      "target": "sparktask.js",
-      "argumentFormat": ""
+      "target": "sparktask.js"
     }
   }
 }
