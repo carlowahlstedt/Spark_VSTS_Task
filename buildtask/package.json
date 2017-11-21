@@ -2,26 +2,13 @@
   "name": "cisco-spark-task",
   "version": "1.0.0",
   "description": "VSTS Cisco Spark Task",
-  "main": "sparktask.js",
-  "scripts": {
-    "test": "sparktask.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carlowahlstedt/Spark_VSTS_Task.git"
-  },
-  "homepage": "https://github.com/carlowahlstedt/Spark_VSTS_Task#readme",
-  "author": "Carlo Wahlstedt",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/carlowahlstedt/Spark_VSTS_Task/issues"
-  },
-  "devDependencies": {},
   "dependencies": {
-    "@types/node": "^8.0.20",
-    "@types/q": "^1.0.3",
     "ciscospark": "^1.17.1",
     "vso-node-api": "^6.2.7-preview",
-    "vsts-task-lib": "^2.0.6"
+    "vsts-task-lib": "^2.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.7",
+    "@types/q": "^1.0.2"
   }
 }
