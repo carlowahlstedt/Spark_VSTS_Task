@@ -37,9 +37,14 @@ function run() {
                             markdown: message,
                             roomId: room.id
                         });
+                        tl.setResult(tl.TaskResult.Succeeded, "Success");
                     }
                 }
             }
+            else {
+                tl.setResult(tl.TaskResult.Failed, "No Team Match Found");
+            }
+            tl.setResult(tl.TaskResult.Failed, "No Room Match Found for that Team");
         }
         catch (err) {
             tl.setResult(tl.TaskResult.Failed, err.constructor.name + ": " + err.message);
