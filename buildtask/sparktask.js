@@ -45,11 +45,13 @@ function run() {
                             roomId: room.id
                         });
                         tl.setResult(tl.TaskResult.Succeeded, "Success");
+                        return;
                     }
                 }
             }
             else {
                 tl.setResult(tl.TaskResult.Failed, "No Team Match Found");
+                return;
             }
             tl.setResult(tl.TaskResult.Failed, "No Room Match Found for that Team");
         }
