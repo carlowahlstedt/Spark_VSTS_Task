@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "VSTS Cisco Spark Task",
   "dependencies": {
-    "ciscospark": "^1.17.1",
+    "ciscospark": "^1.31.1",
     "vso-node-api": "^6.2.7-preview",
     "vsts-task-lib": "^2.0.5"
   },
