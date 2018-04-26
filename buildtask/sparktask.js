@@ -25,8 +25,9 @@ function run() {
             var teams = yield spark.teams.list();
             console.log('Looking for a match');
             for (var index = 0; index < teams.length; index++) {
+                console.log('Team Name: ' + teams.items[index].name);
                 if (teams.items[index].name.toUpperCase() == teamName) {
-                    console.log('Team found');
+                    console.log('Team Match found for ' + teams.items[index].name);
                     team = teams.items[index];
                     break;
                 }
@@ -37,6 +38,7 @@ function run() {
                 console.log('Looking for a match');
                 for (var index = 0; index < rooms.length; index++) {
                     var room = rooms.items[index];
+                    console.log('Room Name: ' + room.title);
                     if (room.teamId == team.id && room.title.toUpperCase() == roomName) {
                         console.log('Room found for that team');
                         console.log('Message to output: ' + message);
@@ -44,6 +46,7 @@ function run() {
                             markdown: message,
                             roomId: room.id
                         });
+                        console.log('Message Send');
                         tl.setResult(tl.TaskResult.Succeeded, "Success");
                         return;
                     }

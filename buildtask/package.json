@@ -4,6 +4,7 @@
   "description": "VSTS Cisco Spark Task",
   "dependencies": {
     "ciscospark": "^1.31.1",
+    "hoek": "^5.0.3",
     "vso-node-api": "^6.2.7-preview",
     "vsts-task-lib": "^2.0.5"
   },
