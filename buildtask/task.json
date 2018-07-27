@@ -1,16 +1,16 @@
 {
   "id": "44ff220e-377b-4264-a5aa-b8545eaf4d02",
   "name": "ciscoSpark",
-  "friendlyName": "Cisco Spark",
-  "description": "Posts a message to a Cisco Spark space.",
+  "friendlyName": "Cisco Webex Teams",
+  "description": "Posts a message to a Cisco Webex Teams space.",
   "category": "Utility",
   "author": "Carlo Wahlstedt",
   "version": {
     "Major": 0,
     "Minor": 2,
-    "Patch": 11
+    "Patch": 12
   },
-  "instanceNameFormat": "Spark Message to $(teamName) - $(roomName)",
+  "instanceNameFormat": "Teams Message to $(teamName) - $(roomName)",
   "inputs": [
     {
       "name": "access_token",
