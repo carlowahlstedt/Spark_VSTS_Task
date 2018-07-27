@@ -2,7 +2,7 @@
 
 A VSTS/TFS Task to post messages to Cisco Webex Teams
 
-[![Build status](https://carlo.visualstudio.com/VSTS_Tasks/_apis/build/status/Spark)](https://carlo.visualstudio.com/VSTS_Tasks/_build/latest?definitionId=13)
+[![Build status](https://carlo.vsrm.visualstudio.com/_apis/public/Release/badge/2a4da4b3-df80-44fa-b40f-1f86827ea145/3/3)](https://carlo.vsrm.visualstudio.com/_apis/public/Release/badge/2a4da4b3-df80-44fa-b40f-1f86827ea145/3/3)
 
 ## How to get the task to work
 
