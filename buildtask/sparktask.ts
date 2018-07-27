@@ -11,7 +11,7 @@ async function run() {
         var message = tl.getInput('message', true);
         var team: any;
 
-        console.log('Preparing for a connection to Cisco Spark');
+        console.log('Preparing for a connection to Cisco Webex Teams');
         const spark = require(`ciscospark/env`);
 
         console.log('Getting the teams list');

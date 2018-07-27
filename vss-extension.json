@@ -1,15 +1,15 @@
 {
   "manifestVersion": 1,
   "id": "CiscoSpark",
-  "name": "Cisco Spark",
-  "version": "0.2.11",
+  "name": "Cisco Webex Teams",
+  "version": "0.2.12",
   "publisher": "carlowahlstedt",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "Posts a message to a Cisco Spark space.",
+  "description": "Posts a message to a Cisco Webex Teams space.",
   "categories": [
     "Collaborate"
   ],
