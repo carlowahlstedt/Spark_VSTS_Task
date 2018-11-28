@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "CiscoSpark",
   "name": "Cisco Webex Teams",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "publisher": "carlowahlstedt",
   "targets": [
     {
