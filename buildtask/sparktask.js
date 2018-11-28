@@ -19,7 +19,7 @@ function run() {
             var roomName = tl.getInput('roomName', true).toUpperCase();
             var message = tl.getInput('message', true);
             var team;
-            console.log('Preparing for a connection to Cisco Spark');
+            console.log('Preparing for a connection to Cisco Webex Teams');
             const spark = require(`ciscospark/env`);
             console.log('Getting the teams list');
             var teams = yield spark.teams.list();

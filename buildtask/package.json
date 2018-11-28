@@ -4,12 +4,12 @@
   "description": "VSTS Cisco Spark Task",
   "dependencies": {
     "ciscospark": "^1.32.23",
-    "hoek": "^5.0.3",
-    "vso-node-api": "^6.2.7-preview",
-    "vsts-task-lib": "^2.0.5"
+    "hoek": "^5.0.4",
+    "vso-node-api": "^6.5.0",
+    "vsts-task-lib": "^2.7.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.7",
-    "@types/q": "^1.0.2"
+    "@types/node": "^8.10.38",
+    "@types/q": "^1.5.1"
   }
 }
